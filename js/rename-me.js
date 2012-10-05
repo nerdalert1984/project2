@@ -4,47 +4,48 @@
 // Advanced JavaScript
 
 // My Variables
-var heroName = "Hunter, Slayer of Evil ",
-	heroPresent = true,
-	haveWeapons = false,
+var heroPresent = true,
+	haveWeapons = true,
 	numOfMonsters = 4,
+	monstersSlain = 0
 	monsters = [ " Hunpar the Goblin ", 
 				 " Wretchmaw the Troll King ", 
 				 " Arch-Lich Volsonis ",
 				 " Firereek the Red Dragon "
-			   ],
+],
 	heroicWeapons = [ " Steel shortsword ",
 					  " Longsword of Eternal Flame ",
 					  " Blessed Mace of Smiting ",
 					  " Greatsword of Draconic Ruin "
-					];
+];
 	
-// Boolean Function
-var findHero = function () {
-	console.log("The hero is ready!");
+// Boolean Function with return.
+var findHero = function (heroName) {
+	if (heroPresent && haveWeapons) {
+	heroStatus = " is ready!";
+} else { heroStatus = " is not ready.";}
+  heroFound = "Our hero, " + heroName + heroStatus;
+  return heroFound;
 };
-var noHero = function () {
-	console.log("The hero is not ready.")};
+var haveHero = findHero("Hunter the Slayer of Evil");
+console.log(haveHero);
 
+// Number Function + While Loop (Counts down number of monsters slain and in need of slaying.)
+var slainMonsters = function () {
 
-if (heroPresent && haveWeapons) {
-	findHero();
-} else {
-	noHero();
+while (monstersSlain <= 4) {
+	console.log(monstersSlain + " monsters have been slain")
+	monstersSlain++;
+};
 };
 
-
-
-
-
-
-// Number Function + While Loop (Counts down number of monsters in need of slaying.)
 while (numOfMonsters > 0) {
 	console.log("There are " + numOfMonsters + " vile monsters to slay.");
 	numOfMonsters--;
-
+	slainMonsters();
 };
 
-console.log("There are no monsters to slay.");
+console.log("There are no monsters to slay.")
+
 
 // For Loop
