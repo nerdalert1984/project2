@@ -18,3 +18,10 @@ var heroName = "Hunter, Slayer of Evil ",
 					  " Blessed Mace of Smiting ",
 					  " Greatsword of Draconic Ruin "];
 	
+while (numOfMonsters > 0) {
+	console.log("There are " + numOfMonsters + " vile monsters to slay.");
+	numOfMonsters--;
+
+};
+
+console.log("There are no monsters to slay.");
