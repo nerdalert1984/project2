@@ -7,17 +7,26 @@
 var heroPresent = true,
 	haveWeapons = true,
 	numOfMonsters = 4,
-	monstersSlain = 0
 	monsters = [ " Hunpar the Goblin ", 
 				 " Wretchmaw the Troll King ", 
 				 " Arch-Lich Volsonis ",
 				 " Firereek the Red Dragon "
 ],
+	monsterHP = [ 10,
+				  30,
+				  60,
+				  120
+],
 	heroicWeapons = [ " Steel shortsword ",
 					  " Longsword of Eternal Flame ",
 					  " Blessed Mace of Smiting ",
 					  " Greatsword of Draconic Ruin "
-];
+],
+	weaponDMG = [ 5,
+				  10,
+				  15,
+				  20
+]
 	
 // Boolean Function with return.
 var findHero = function (heroName) {
@@ -30,22 +39,14 @@ var findHero = function (heroName) {
 var haveHero = findHero("Hunter the Slayer of Evil");
 console.log(haveHero);
 
-// Number Function + While Loop (Counts down number of monsters slain and in need of slaying.)
-var slainMonsters = function () {
-
-while (monstersSlain <= 4) {
-	console.log(monstersSlain + " monsters have been slain")
-	monstersSlain++;
+// Number Function + While Loop (Counts down number of monsters in need of slaying.)
+var pleadingVillagers = function (numOfVillagers) {
+while (numOfVillagers < 4) {
+	enoughVillagers = "There are " + numOfVillagers + " pleading for help.";
+	numOfVillagers++;
+	return enoughVillagers;};
 };
-};
+var pleaVillagers = pleadingVillagers(0)
 
-while (numOfMonsters > 0) {
-	console.log("There are " + numOfMonsters + " vile monsters to slay.");
-	numOfMonsters--;
-	slainMonsters();
-};
+console.log("There are so many villagers pleading for help.")
 
-console.log("There are no monsters to slay.")
-
-
-// For Loop
