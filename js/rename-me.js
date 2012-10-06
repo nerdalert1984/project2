@@ -12,20 +12,10 @@ var heroPresent = true,
 				 " Arch-Lich Volsonis ",
 				 " Firereek the Red Dragon "
 ],
-	monsterHP = [ 10,
-				  30,
-				  60,
-				  120
-],
 	heroicWeapons = [ " Steel shortsword ",
 					  " Longsword of Eternal Flame ",
 					  " Blessed Mace of Smiting ",
 					  " Greatsword of Draconic Ruin "
-],
-	weaponDMG = [ 5,
-				  10,
-				  15,
-				  20
 ]
 	
 // Boolean Function with return.
@@ -41,12 +31,15 @@ console.log(haveHero);
 
 // Number Function + While Loop (Counts down number of monsters in need of slaying.)
 var pleadingVillagers = function (numOfVillagers) {
-while (numOfVillagers < 4) {
-	enoughVillagers = "There are " + numOfVillagers + " pleading for help.";
+while (numOfVillagers <= 4) {
+	enoughVillagers = "There are " + numOfVillagers + " villagers pleading for help.";
+	console.log(enoughVillagers);
 	numOfVillagers++;
-	return enoughVillagers;};
+
 };
+	return enoughVillagers;};
 var pleaVillagers = pleadingVillagers(0)
+console.log(pleaVillagers)
 
 console.log("There are so many villagers pleading for help.")
 
